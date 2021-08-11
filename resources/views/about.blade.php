@@ -16,6 +16,43 @@
 
    <p> A ImpoSerc Lda é uma empresa Moçambicana, a actuar nas áreas de Importação & Exportação,</p>
        <p> consultoria em Contabilidade e TIC’s (Tecnologias de informação e comunicação), </p> 
-       <p> sedeada na Cidade de Maputo, que responde às necessidades e exigências das empresas, dirige, planifica e coordena as actividades empresarias nos diferentes quadros e categorias.</p> 
+       <p> sedeada na Cidade de Maputo.</p> 
+       
+       <br>
+       <div class="container" style="color:black">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="icon-block">
+           <!-- <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2> -->
+            <h5 class="center">Natureza</h5>
+            <p class="light">Importação e Serviços de Consultoria, Lda é uma empresa de Consultoria em contabilidade, Tecnologias de Informação e Comunicação de acordo com os princípios, objectivos, políticas e planos.</p>
+          </div>
+        </div><br>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+           <!-- <h2 class="center brown-text"><i class="material-icons">group</i></h2>-->
+            <h5 class="center">Visão</h5>
+
+            <p class="light">Formular políticas para o desenvolvimento integrado, articulado e qualitativo da Importação e Serviços de Consultoria das empresas, com vista à indução do crescimento e desenvolvimento socio-económico das empresas em Moçambique.</p>
+          </div>
+        </div><br>
+        <div class="col s12 m3">
+          <div class="icon-block">
+          <!--  <h2 class="center brown-text"><i class="material-icons">settings</i></h2>-->
+            <h5 class="center">Missão</h5>
+
+            <p class="light">Promover a oferta de soluções tecnológicas e de gestão às empresas nas áreas estratégicas definidas nos programas da ImpoSerC.</p>
+          </div>
+        </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
 
 @endsection

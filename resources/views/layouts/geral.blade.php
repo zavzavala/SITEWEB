@@ -21,7 +21,6 @@
     color:#536;;
   }
   
-  
   </style>
 </head>
 <body class="body">
@@ -33,12 +32,16 @@
                         <b><img src="{{asset('img/Logotipo.png')}}" alt="homepage" class="dark-logo" style="width:80px;" /></b>
                         <!--End Logo icon -->
                     </a>
+                    
                     <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large"><i class="material-icons">menu</i></a>
      
            <ul class="left hide-on-med-and-down">  
+           
     @if(isset($site))
-    <li><a  href="{{route('paginageral')}}">Serviços</a></li>
-      <li><a  href="{{route('playNow')}}">Play Me</a></li>
+    <!-- -->
+   <li><a class='dropdown-trigger' href='#' data-target='dropdown2'>Clique</a></li> &nbsp;&nbsp;
+   
+      
       @if (Route::has('login'))
                 
                 @auth
@@ -57,7 +60,7 @@
                         <li>  <a href="{{ route('login') }}">Log in</a></li>
 
                         @if (Route::has('register'))
-                        <li> <a href="{{ route('register') }}">Register</a></li>
+                        <li> <a href="{{ route('register') }}">Registar</a></li>
                         @endif
                     @endauth
           @endif
@@ -68,9 +71,18 @@
  
   @endif
       </ul>
-      
+           <!-- Dropdown Structure -->
+  <ul id='dropdown2' class='dropdown-content'>
+      <!--<li><a  href="{{route('playNow')}}">Play Me</a></li>-->
+    <li><a class="tooltipped" data-position="left" data-tooltip="Nosssos Serviços" href="{{route('paginageral')}}">Serviços</a></li>
+     <li><a class="tooltipped" data-position="left" data-tooltip="Sobre a ImpoSerC" href="{{ route('about') }}">Sobre nos</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><i <a class="large material-icons">call</i></li>
+     <li><a class="tooltipped" data-position="left" data-tooltip="Telefonar" href="+258843856996">Ligar</a></li>
+      <li><a <a class="tooltipped" data-position="left" data-tooltip="Mande-nos um email" href="imposec321@gmail.com">E-Mail</a></li>
+  </ul><!--End Dropdown Structure -->
       </nav>
-      </div><!-----FIM DA NAV------>
+      </div><!-----End NAV------>
 
       <ul id="slide-out" class="sidenav">
       <li><div class="user-view">
@@ -78,18 +90,20 @@
         <img src="{{url('images/Background/parede.jpg')}}">
       </div>
       <a href="#user"><img class="circle" src="{{url('img/Logotipo.png')}}"></a>
-      <a href="#name"><span class="white-text name">Zavala</span></a>
-      <a href="#email"><span class="white-text email">zavzavala76@gmail.com</span></a>
+      <a href="#name"><span class="white-text name">ImpoSerC</span></a>
+      <a href="#email"><span class="white-text email">imposec321@gmail.com</span></a>
     </div></li>
+    
 
       @if(isset($site))
      
-      <li><a  href="{{route('paginageral')}}">Serviços</a></li>
-      <li><a  href="{{route('playNow')}}">Play Me</a></li>
+       <li> <a class='dropdown-trigger' href='#' data-target='dropdown1'>Clique</a></li>
+      
+     
       @if (Route::has('login'))
                 
                 @auth
-                {{-- <li><a href="{{ url('/start') }}">Pagina inicial</a><</li>li> --}}
+                {{-- <li><a href="{{ url('/start') }}">página inicial</a><</li>li> --}}
 
                 @if ( Auth::user()->role == 1)
                 <li> <a href="{{ route('admin.dashboard') }}">Admin</a></li>
@@ -112,10 +126,20 @@
  <li><a class="tooltipped" data-position="top" data-tooltip="Está atualmente nesta página" href="#">Importação & Exportação</a></li>
   <li><a class="tooltipped" data-position="bottom" data-tooltip="Voltar a página anterior" href="{{url('geral')}}">Voltar</a></li>
  
- <li><a class="tooltipped" data-position="bottom" data-tooltip="Ir a página principal" href="{{url('start')}}">página principa</a></li>
+ <li><a class="tooltipped" data-position="bottom" data-tooltip="Ir a página principal" href="{{url('start')}}">página principal</a></li>
 
   @endif
       </ul>
+        <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+      <!--<li><a  href="{{route('playNow')}}">Play Me</a></li>-->
+    <li><a class="tooltipped" data-position="right" data-tooltip="Nossos Serviços" href="{{route('paginageral')}}">Serviços</a></li>
+     <li><a class="tooltipped" data-position="right" data-tooltip="Sobre a ImpoSerC" href="{{ route('about') }}">Sobre nos</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><i <a data-tooltip="Telefonar" class="large material-icons">call</i></li>
+     <li><a class="tooltipped" data-position="right" data-tooltip="Telefonar" class="tooltipped" data-position="right" href="+258843856996">Ligar</a></li>
+      <li><a <a class="tooltipped" data-position="right" data-tooltip="Mande-nos um email" href="imposec321@gmail.com">E-Mail</a></li>
+  </ul>
  
 <br>
     @yield('content-page')
@@ -133,7 +157,7 @@
           <h5 class="white-text">Outros</h5>
           <ul>
             <li><a class="white-text" href="{{ route('a+equipe~ImpoSerC') }}">Equipe ImpoSerC</a></li>
-            <li><a class="white-text" href="{{ route('about') }}">Sobre</a></li>            
+            <li><a class="white-text" href="{{ route('about') }}">Sobre Nos</a></li>            
           </ul>
         </div>
         <div class="col l3 s12">
@@ -153,7 +177,7 @@
     </div>
   <div class="footer-copyright">
       <div class="container">
-      2021 <a class="brown-text text-lighten-3" href="#">ImpoSerC</a>
+     <?php NOW()?> <a class="brown-text text-lighten-3" href="#">ImpoSerC</a>
       </div>
     </div>
 
@@ -179,6 +203,15 @@
   $(document).ready(function(){
     $('.tooltipped').tooltip();
   });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $('.dropdown-trigger').dropdown();
   </script>
   </body>
 </html>
