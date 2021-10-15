@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
-
+//use Illuminate\Auth\Notifications\ResetPassword;
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -23,8 +23,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerPolicies();
+       // $this->registerPolicies();
+       $this->registerPolicies();
 
-        //
+      // ResetPassword::createUrlUsing(function ($user, string $token) {
+         //  return 'MeuFormularioAqui?token='.$token;
+      // });
+        //Estes acima e para o form predefinido por mim
     }
 }

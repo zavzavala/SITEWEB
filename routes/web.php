@@ -5,7 +5,7 @@ use App\Http\Controllers\controlador;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactNosController;
-
+use App\Http\Livewire\Post\Show as BlogShow;
 use App\Models\ModelSite;
 use App\Models\User;
 
@@ -116,7 +116,7 @@ Route::get('settings',[UserController::class,'settings'])->name('user.settings')
 
 });
 
-
+Route::get('comment-post{post}',BlogShow::class)->name('post.show');
 
 
 

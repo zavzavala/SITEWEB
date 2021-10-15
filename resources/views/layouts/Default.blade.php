@@ -19,8 +19,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image:url(images/mn.jpeg);
-    background-size: cover;
+ /* background-image:url(img/.); */
+  background-color:#444;
+  background-size: cover;
   overflow: hidden;
  
 }
@@ -47,14 +48,15 @@
   left: 0;
 }
 .app__bgimg-image--1 {
-  background: url(images/mn.jpeg) center center no-repeat;
+  background: url(img/tics.jpg) center center no-repeat;
   background-size: cover;
 }
 .app__bgimg-image--2 {
-  background: url(images/mn.jpeg) center center no-repeat;
+  /*background: url(images/mn.jpeg) center center no-repeat;*/
+  background: url(img/cont1.jpg) center center no-repeat;
   background-size: cover;
   opacity: 0;
-  transition: opacity 0ms 1300ms;
+  transition: opacity 0ms 1300ms; 
   will-change: opacity;
 }
 .app__text {
